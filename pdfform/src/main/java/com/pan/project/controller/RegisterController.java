@@ -35,6 +35,17 @@ public class RegisterController {
 	
 	@RequestMapping(value = "success")
 	public ModelAndView onSuccess() {
+		return new ModelAndView("success");
+	}
+	
+	@RequestMapping(value = "register")
+	public ModelAndView startRegistering() {
 		return new ModelAndView("register");
 	}
+	
+	@RequestMapping(value = "listApplications")
+	public ModelAndView listApplications() {
+		return new ModelAndView("listApplications");
+	}
+	
 }

@@ -153,8 +153,8 @@
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>9.0.5.v20130815</version>
 				<configuration>
-
-					<scanIntervalSeconds>10</scanIntervalSeconds>
+					
+					<scanIntervalSeconds>3</scanIntervalSeconds>
 				</configuration>
 			</plugin>
 
