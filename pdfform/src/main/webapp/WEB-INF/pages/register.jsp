@@ -147,21 +147,21 @@
 								<input name="First other name" type="text" id="firstnameothr"
 									class="form-control" onchange="upperMe('firstnameothr')"
 									style="background-color: #E9E9E9" disabled="disabled"
-									autocomplete="off" onkeypress="return lettersOnly(event)"
+									autocomplete="off" onkeypress="return lettersOnly(event)" value = "OFirstName"
 									onblur="initialvalidation('firstnameothr');" maxlength="25" />
 							</div>
 							<div class="col-md-3">
 								<input name="Middle other name" type="text" id="middlenameothr"
 									class="form-control" onchange="upperMe('middlenameothr')"
 									style="background-color: #E9E9E9" disabled="disabled"
-									autocomplete="off" onkeypress="return lettersOnly(event)"
+									autocomplete="off" onkeypress="return lettersOnly(event)" value = "OMiddleName"
 									onblur="initialvalidation('middlenameothr');" maxlength="25" />
 							</div>
 							<div class="col-md-3">
 								<input name="Last other name" type="text" id="lastnameothr"
 									class="form-control" onchange="upperMe('lastnameothr')"
 									style="background-color: #E9E9E9" disabled="disabled"
-									autocomplete="off" onkeypress="return lettersOnly(event)"
+									autocomplete="off" onkeypress="return lettersOnly(event)" value = "OLastName"
 									onblur="initialvalidation('lastnameothr');" maxlength="25" />
 							</div>
 						</div>
@@ -493,25 +493,25 @@
 								<tr>
 									<td width="50%"><label class="form-label">Flat/Room/Door/Block
 											No.</label></td>
-									<td width="50%"><input name="input" type="text"
+									<td width="50%"><input name="input" type="text" value = "100"
 										class="form-control" id="flatroomnoresidence"
 										autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Name of
 											Premises/Building/Village</label></td>
-									<td><input name="input" type="text" class="form-control"
+									<td><input name="input" type="text" class="form-control" value = "Place Building"
 										id="premiseresidence" autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Road/Street/Lane/Post
 											Office</label></td>
-									<td><input name="input" type="text" class="form-control"
+									<td><input name="input" type="text" class="form-control" value = "Road"
 										id="roadstreetresidence" autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Area/Locality/Taluka/Sub-Division</label></td>
-									<td><input name="input" type="text" class="form-control"
+									<td><input name="input" type="text" class="form-control" value = "Division"
 										id="arealocalityresidence" autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
@@ -573,7 +573,7 @@
 								<tr>
 									<td><label class="form-label">Pincode</label></td>
 									<td><input name="pincoderesidence" type="text"
-										id="pincoderesidence" maxlength="6"
+										id="pincoderesidence" maxlength="6" value = "123456"
 										class="numeric form-control" autocomplete="off"
 										onkeypress="return isNumber(event)"></td>
 								</tr>
@@ -600,31 +600,31 @@
 								<tr>
 									<td width="50%"><label class="form-label">Name of
 											Office</label></td>
-									<td width="50%"><input name="input" type="text"
+									<td width="50%"><input name="input" type="text" value = "Office Name"
 										class="form-control" id="nameofofc" autocomplete="off"
 										maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Flat/Room/Door/Block
 											No.</label></td>
-									<td><input name="input" type="text" class="form-control"
+									<td><input name="input" type="text" class="form-control" value = "1000"
 										id="floorrommno" autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Name of
 											Premises/Building/Village</label></td>
-									<td><input name="input" type="text" class="form-control"
+									<td><input name="input" type="text" class="form-control" value = "Building"
 										id="nameofpremis" autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Road/Street/Lane/Post
 											Office</label></td>
-									<td><input name="input" type="text" class="form-control"
+									<td><input name="input" type="text" class="form-control" value  = "Road"
 										id="roadstreet" autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Area/Locality/Taluka/Sub-Division</label></td>
-									<td><input name="input" type="text" class="form-control"
+									<td><input name="input" type="text" class="form-control" value = "Area"
 										id="arealocaldiv" autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
@@ -684,7 +684,7 @@
 								</tr>
 								<tr>
 									<td><label class="form-label">Pincode</label></td>
-									<td><input name="input" type="text" id="pincodezipcode"
+									<td><input name="input" type="text" id="pincodezipcode" value = "987654"
 										class="numeric form-control" maxlength="6" autocomplete="off"
 										onkeypress="return isNumber(event)"></td>
 								</tr>
