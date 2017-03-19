@@ -35,7 +35,16 @@ public class Register {
 	private String print_firstname;
 
 	private String print_lastname;
-
+	
+	//dob
+	
+	private String dd;
+	
+	private String mm;
+	
+	private String dob_year;
+	
+//Father Name
 	private String father_fname;
 
 	private String father_lname;
@@ -56,7 +65,6 @@ public class Register {
 
 	private String proofofidentity;
 
-
 	private String proofofresidence;
 
 	private String dobproof;
@@ -67,14 +75,45 @@ public class Register {
 	private String[] chkincome;
 
 	private String[] businessType;
-	
-	
 
+	// ADDRESS INFORMATION
+
+	// Residence
+
+	private String flatroomnoresidence;
+
+	private String premiseresidence;
+
+	private String roadstreetresidence;
+
+	private String arealocalityresidence;
+
+	private String searchstate;
+
+	private String district;
+
+	private String pincoderesidence;
+
+	private String residence_country;
+
+	// Office
+	private String nameofofc;
+
+	private String floorrommno;
+
+	private String nameofpremis;
+
+	private String roadstreet;
+
+	private String arealocaldiv;
+
+	private String towncity;
+
+	private String pincodezipcode;
+	
 	public Integer getId() {
 		return id;
 	}
-
-	
 
 	public void setId(Integer id) {
 		this.id = id;
@@ -192,25 +231,6 @@ public class Register {
 		this.communication = communication;
 	}
 
-	
-
-	public String[] getAnnualincome() {
-		return chkincome;
-	}
-
-	public void setAnnualincome(String[] annualincome) {
-		this.chkincome = annualincome;
-	}
-
-	public String[] getBusinessType() {
-		return businessType;
-	}
-
-	public void setBusinessType(String[] businessType) {
-		this.businessType = businessType;
-	}
-	
-	
 	public String getProofofidentity() {
 		return proofofidentity;
 	}
@@ -251,6 +271,163 @@ public class Register {
 		this.chkincome = chkincome;
 	}
 
+	public String[] getBusinessType() {
+		return businessType;
+	}
+
+	public void setBusinessType(String[] businessType) {
+		this.businessType = businessType;
+	}
+
+	public String getFlatroomnoresidence() {
+		return flatroomnoresidence;
+	}
+
+	public void setFlatroomnoresidence(String flatroomnoresidence) {
+		this.flatroomnoresidence = flatroomnoresidence;
+	}
+
+	public String getPremiseresidence() {
+		return premiseresidence;
+	}
+
+	public void setPremiseresidence(String premiseresidence) {
+		this.premiseresidence = premiseresidence;
+	}
+
+	public String getRoadstreetresidence() {
+		return roadstreetresidence;
+	}
+
+	public void setRoadstreetresidence(String roadstreetresidence) {
+		this.roadstreetresidence = roadstreetresidence;
+	}
+
+	public String getArealocalityresidence() {
+		return arealocalityresidence;
+	}
+
+	public void setArealocalityresidence(String arealocalityresidence) {
+		this.arealocalityresidence = arealocalityresidence;
+	}
+
+	public String getSearchstate() {
+		return searchstate;
+	}
+
+	public void setSearchstate(String searchstate) {
+		this.searchstate = searchstate;
+	}
+
+	public String getDistrict() {
+		return district;
+	}
+
+	public void setDistrict(String district) {
+		this.district = district;
+	}
+
+	public String getPincoderesidence() {
+		return pincoderesidence;
+	}
+
+	public void setPincoderesidence(String pincoderesidence) {
+		this.pincoderesidence = pincoderesidence;
+	}
+
+
+	public String getNameofofc() {
+		return nameofofc;
+	}
+
+	public void setNameofofc(String nameofofc) {
+		this.nameofofc = nameofofc;
+	}
+
+	public String getFloorrommno() {
+		return floorrommno;
+	}
+
+	public void setFloorrommno(String floorrommno) {
+		this.floorrommno = floorrommno;
+	}
+
+	public String getNameofpremis() {
+		return nameofpremis;
+	}
+
+	public void setNameofpremis(String nameofpremis) {
+		this.nameofpremis = nameofpremis;
+	}
+
+	public String getRoadstreet() {
+		return roadstreet;
+	}
+
+	public void setRoadstreet(String roadstreet) {
+		this.roadstreet = roadstreet;
+	}
+
+	public String getArealocaldiv() {
+		return arealocaldiv;
+	}
+
+	public void setArealocaldiv(String arealocaldiv) {
+		this.arealocaldiv = arealocaldiv;
+	}
+
+	public String getTowncity() {
+		return towncity;
+	}
+
+	public void setTowncity(String towncity) {
+		this.towncity = towncity;
+	}
+
+	public String getPincodezipcode() {
+		return pincodezipcode;
+	}
+
+	public void setPincodezipcode(String pincodezipcode) {
+		this.pincodezipcode = pincodezipcode;
+	}
+	
+	public String getResidence_country() {
+		return residence_country;
+	}
+
+	public void setResidence_country(String residence_country) {
+		this.residence_country = residence_country;
+	}
+
+
+	public String getDd() {
+		return dd;
+	}
+
+	public void setDd(String dd) {
+		this.dd = dd;
+	}
+
+	public String getMm() {
+		return mm;
+	}
+
+	public void setMm(String mm) {
+		this.mm = mm;
+	}
+
+	public String getDob_year() {
+		return dob_year;
+	}
+
+	public void setDob_year(String dob_year) {
+		this.dob_year = dob_year;
+	}
+
+
+
+
 	@Override
 	public String toString() {
 		return "Register [id=" + id + ", firstnameupp=" + firstnameupp + ", lastnameupp=" + lastnameupp
@@ -260,7 +437,14 @@ public class Register {
 				+ mobile + ", email=" + email + ", landLine=" + landLine + ", communication=" + communication
 				+ ", proofofidentity=" + proofofidentity + ", proofofresidence=" + proofofresidence + ", dobproof="
 				+ dobproof + ", proofofoffice=" + proofofoffice + ", chkincome=" + Arrays.toString(chkincome)
-				+ ", businessType=" + Arrays.toString(businessType) + "]";
+				+ ", businessType=" + Arrays.toString(businessType) + ", flatroomnoresidence=" + flatroomnoresidence
+				+ ", premiseresidence=" + premiseresidence + ", roadstreetresidence=" + roadstreetresidence
+				+ ", arealocalityresidence=" + arealocalityresidence + ", searchstate=" + searchstate + ", district="
+				+ district + ", pincoderesidence=" + pincoderesidence + ", residence_country=" + residence_country + ", nameofofc=" + nameofofc
+				+ ", floorrommno=" + floorrommno + ", nameofpremis=" + nameofpremis + ", roadstreet=" + roadstreet
+				+ ", arealocaldiv=" + arealocaldiv + ", towncity=" + towncity + ", pincodezipcode=" + pincodezipcode
+				+ "]";
 	}
-	
+
+
 }

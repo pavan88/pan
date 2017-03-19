@@ -16,7 +16,6 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
-import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.Phrase;
@@ -72,14 +71,18 @@ public abstract class AbstractITextPdfView extends AbstractView {
 
 		Paragraph uncheckedPara = new Paragraph(String.valueOf(unchecked), font);
 
+		cleanup(pdfStamper, new Rectangle(175f, 608f, 200f, 618f));
 		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getLastnameupp()), 195, 610, 0);
 
+		cleanup(pdfStamper, new Rectangle(175f, 593f, 200f, 603f));
 		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getFirstnameupp()), 195, 595, 0);
 
+		// cleanup(pdfStamper, new Rectangle(175f, 578f, 200f, 588f));
 		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getMiddlenameupp()), 195, 580, 0);
 
 		// MALE = Mr.
 		// FEMAIL = Smt
+
 		if (reg.getGender().equalsIgnoreCase("male")) {
 			cleanup(pdfStamper, new Rectangle(210f, 633f, 230f, 622f));
 			ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, checkedPara, 225, 620, 0);
@@ -96,16 +99,13 @@ public abstract class AbstractITextPdfView extends AbstractView {
 			ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, uncheckedPara, 275, 620, 0);
 		}
 
+		cleanup(pdfStamper, new Rectangle(30f, 548f, 150f, 558f));
 		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getPrint_firstname()), 165, 550, 0);
 
-		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getFather_lname()), 165, 550 - 180, 0);
-
-		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getFather_fname()), 165, 550 - 195, 0);
-
-		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getFather_mname()), 165, 550 - 210, 0);
+		// DOB
+		cleanup(pdfStamper, new Rectangle(35f, 410f, 89f, 420f));
 
 		// GENDER For indivuals
-
 		if (reg.getGender().equalsIgnoreCase("male")) {
 			cleanup(pdfStamper, new Rectangle(245f, 450f, 260f, 465f));
 			ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, checkedPara, 245, 450, 0);
@@ -121,6 +121,64 @@ public abstract class AbstractITextPdfView extends AbstractView {
 			cleanup(pdfStamper, new Rectangle(330f, 450f, 345f, 463f));
 			ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, uncheckedPara, 330, 450, 0);
 		}
+
+		// FATHER INFORMATION
+		cleanup(pdfStamper, new Rectangle(170f, 368f, 200f, 378f));
+		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getFather_lname()), 165, 550 - 180, 0);
+
+		cleanup(pdfStamper, new Rectangle(170f, 352f, 200f, 362f));
+		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getFather_fname()), 165, 550 - 195, 0);
+
+		cleanup(pdfStamper, new Rectangle(170f, 338f, 200f, 348f));
+		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getFather_mname()), 165, 550 - 210, 0);
+
+		// 5.ADRESS INFORMATION
+		cleanup(pdfStamper, new Rectangle(170f, 201f, 230f, 211f));
+		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getFlatroomnoresidence()), 170, 203, 0);
+
+		cleanup(pdfStamper, new Rectangle(170f, 196f, 230f, 186f));
+		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getPremiseresidence()), 170, 189, 0);
+
+		cleanup(pdfStamper, new Rectangle(170f, 180f, 230f, 170f));
+		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getRoadstreetresidence()), 170, 173, 0);
+
+		cleanup(pdfStamper, new Rectangle(170f, 155f, 230f, 165f));
+		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getArealocalityresidence()), 170, 158, 0);
+
+		// District
+		cleanup(pdfStamper, new Rectangle(170f, 140f, 230f, 150f));
+		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getDistrict()), 170, 130, 0);
+
+		// State
+		cleanup(pdfStamper, new Rectangle(30f, 110f, 300f, 123f));
+		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getSearchstate()), 60, 115, 0);
+
+		ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new Phrase(reg.getPincoderesidence()), 160, 115, 0);
+
+		// ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new
+		// Phrase(reg.getResidence_country()), 180, 115, 0);
+
+		// Office Residence
+
+		cleanup(pdfStamper, new Rectangle(170f, 83f, 230f, 94f));
+		// ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new
+		// Phrase(reg.getFlatroomnoresidence()), 170, 205, 0);
+
+		cleanup(pdfStamper, new Rectangle(170f, 68f, 230f, 79f));
+		// ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new
+		// Phrase(reg.getPremiseresidence()), 170, 190, 0);
+
+		cleanup(pdfStamper, new Rectangle(170f, 53f, 230f, 64f));
+		// ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new
+		// Phrase(reg.getRoadstreetresidence()), 170, 175, 0);
+
+		cleanup(pdfStamper, new Rectangle(170f, 38f, 230f, 49f));
+		// ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new
+		// Phrase(reg.getArealocalityresidence()), 170, 160, 0);
+
+		cleanup(pdfStamper, new Rectangle(170f, 18f, 230f, 29f));
+		// ColumnText.showTextAligned(canvas, Element.ALIGN_LEFT, new
+		// Phrase(reg.getSearchstate()), 170, 145, 0);
 
 		// GOTO PAGE2
 
@@ -142,7 +200,7 @@ public abstract class AbstractITextPdfView extends AbstractView {
 
 	private void cleanup(PdfStamper pdfStamper, Rectangle rectangle) throws IOException, DocumentException {
 		List<PdfCleanUpLocation> cleanUpLocations = new ArrayList<PdfCleanUpLocation>();
-		cleanUpLocations.add(new PdfCleanUpLocation(1, rectangle, BaseColor.BLUE));
+		cleanUpLocations.add(new PdfCleanUpLocation(1, rectangle, BaseColor.WHITE));
 		PdfCleanUpProcessor cleaner = new PdfCleanUpProcessor(cleanUpLocations, pdfStamper);
 		cleaner.cleanUp();
 

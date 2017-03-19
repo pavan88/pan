@@ -84,27 +84,90 @@
 					
 					 <div class="form-row col-md-10">
                         <div class="form-group">
-                            <div class="col-md-3"><label class="control-label">Gender <span class="mandatory">*</span></label></div>
-                            <div class="col-md-3 check-box">
-                              <input type="radio" name="gender" value="male" id="gender">
-                              <label for="gender1">Male</label>
-                              <input type="radio" name="gender" value="female" id="gender">
-                              <label for="gender2">Female</label>
+                            <div class="col-md-3"><label class="control-label">Date of Birth <span class="mandatory">*</span></label></div>
+                            <div class="col-md-9 date-control">								
+                            <SELECT name='dd' id='dd' class="form-control">
+                            <OPTION VALUE=""> DD</OPTION>
+                            <OPTION VALUE="01"> 1</OPTION>
+                            <OPTION VALUE="02"> 2</OPTION>
+                            <OPTION VALUE="03"> 3</OPTION>
+                            <OPTION VALUE="04"> 4</OPTION>
+                            <OPTION VALUE="05"> 5</OPTION>
+                            <OPTION VALUE="06"> 6</OPTION>
+                            <OPTION VALUE="07"> 7</OPTION>
+                            <OPTION VALUE="08"> 8</OPTION>
+                            <OPTION VALUE="09"> 9</OPTION>
+                            <OPTION VALUE="10"> 10</OPTION>
+                            <OPTION VALUE="11"> 11</OPTION>
+                            <OPTION VALUE="12"> 12</OPTION>
+                            <OPTION VALUE="13"> 13</OPTION>
+                            <OPTION VALUE="14"> 14</OPTION>
+                            <OPTION VALUE="15"> 15</OPTION>
+                            <OPTION VALUE="16"> 16</OPTION>
+                            <OPTION VALUE="17"> 17</OPTION>
+                            <OPTION VALUE="18"> 18</OPTION>
+                            <OPTION VALUE="19"> 19</OPTION>
+                            <OPTION VALUE="20"> 20</OPTION>
+                            <OPTION VALUE="21"> 21</OPTION>
+                            <OPTION VALUE="22"> 22</OPTION>
+                            <OPTION VALUE="23"> 23</OPTION>
+                            <OPTION VALUE="24"> 24</OPTION>
+                            <OPTION VALUE="25"> 25</OPTION>
+                            <OPTION VALUE="26"> 26</OPTION>
+                            <OPTION VALUE="27"> 27</OPTION>
+                            <OPTION VALUE="28"> 28</OPTION>
+                            <OPTION VALUE="29"> 29</OPTION>
+                            <OPTION VALUE="30"> 30</OPTION>
+                            <OPTION VALUE="31"> 31</OPTION>
+                            </SELECT>
+                            <SELECT name='mm' id='mm' class="form-control">
+                            <OPTION VALUE=""> MM</OPTION>
+                            <OPTION VALUE="01"> JAN</OPTION>
+                            <OPTION VALUE="02"> FEB</OPTION>
+                            <OPTION VALUE="03"> MAR</OPTION>
+                            <OPTION VALUE="04"> APR</OPTION>
+                            <OPTION VALUE="05"> MAY</OPTION>
+                            <OPTION VALUE="06"> JUN</OPTION>
+                            <OPTION VALUE="07"> JUL</OPTION>
+                            <OPTION VALUE="08"> AUG</OPTION>
+                            <OPTION VALUE="09"> SEP</OPTION>
+                            <OPTION VALUE="10"> OCT</OPTION>
+                            <OPTION VALUE="11"> NOV</OPTION>
+                            <OPTION VALUE="12"> DEC</OPTION>
+                            </SELECT>
+                            <input name="dob_year"  id="dob_year" onchange="yyyychange()" placeholder="YYYY" type="text" class="form-control"  autocomplete="off"  maxlength="4" onkeypress="return isNumber(event)"/>
                             </div>
-                            <div class="col-md-2"><label class="control-label">Marital Status <span class="mandatory">*</span></label></div>
-                            <div class="col-md-4 check-box">
-                              <input type="radio" name="maritalstatus" value="single" id="maritalstatus">
-                              <label for="maritalstatus">Single</label>
-                              <input type="radio" name="maritalstatus" value="married" id="maritalstatus">
-                              <label for="maritalstatus">Married</label>
-                        	</div>
                         </div>
                     </div>
+					
 
 					<div class="form-row col-md-10">
 						<div class="form-group">
-							
+							<div class="col-md-3">
+								<label class="control-label">Gender <span
+									class="mandatory">*</span></label>
+							</div>
+							<div class="col-md-3 check-box">
+								<input type="radio" name="gender" value="male" id="gender">
+								<label for="gender1">Male</label> <input type="radio"
+									name="gender" value="female" id="gender"> <label
+									for="gender2">Female</label>
+							</div>
+							<div class="col-md-2">
+								<label class="control-label">Marital Status <span
+									class="mandatory">*</span></label>
+							</div>
+							<div class="col-md-4 check-box">
+								<input type="radio" name="maritalstatus" value="single"
+									id="maritalstatus"> <label for="maritalstatus">Single</label>
+								<input type="radio" name="maritalstatus" value="married"
+									id="maritalstatus"> <label for="maritalstatus">Married</label>
+							</div>
 						</div>
+					</div>
+
+					<div class="form-row col-md-10">
+						<div class="form-group"></div>
 					</div>
 					<div class="form-row col-md-10">
 						<div class="form-group">
@@ -115,19 +178,20 @@
 							</div>
 							<div class="col-md-6">
 								<input name="print_firstname" id="print_firstname"
-									placeholder="First Name" type="text" class="form-control" value="PAN-FNAME"
-									onchange="upperMe('print_firstname')"
+									placeholder="First Name" type="text" class="form-control"
+									value="PAN-FNAME" onchange="upperMe('print_firstname')"
 									onblur="initialvalidation('print_firstname');"
 									autocomplete="off" onkeypress="return lettersOnly(event)"
 									maxlength="50" />
 							</div>
 							<div class="col-md-3">
-								<input name="print_lastname" id="print_lastname" value="PAN-LNAME"
-									placeholder="Last Name" type="text" class="form-control"
-									onchange="upperMe('print_lastname')" autocomplete="off"
-									readonly disabled="disabled"
+								<input name="print_lastname" id="print_lastname"
+									value="PAN-LNAME" placeholder="Last Name" type="text"
+									class="form-control" onchange="upperMe('print_lastname')"
+									autocomplete="off" readonly disabled="disabled"
 									onkeypress="return lettersOnly(event)" />
 							</div>
+
 						</div>
 						<div class="form-group">
 							<div class="col-md-offset-3 notecss">(Name on the PAN Card
@@ -147,22 +211,25 @@
 								<input name="First other name" type="text" id="firstnameothr"
 									class="form-control" onchange="upperMe('firstnameothr')"
 									style="background-color: #E9E9E9" disabled="disabled"
-									autocomplete="off" onkeypress="return lettersOnly(event)" value = "OFirstName"
-									onblur="initialvalidation('firstnameothr');" maxlength="25" />
+									autocomplete="off" onkeypress="return lettersOnly(event)"
+									value="OFirstName" onblur="initialvalidation('firstnameothr');"
+									maxlength="25" />
 							</div>
 							<div class="col-md-3">
 								<input name="Middle other name" type="text" id="middlenameothr"
 									class="form-control" onchange="upperMe('middlenameothr')"
 									style="background-color: #E9E9E9" disabled="disabled"
-									autocomplete="off" onkeypress="return lettersOnly(event)" value = "OMiddleName"
+									autocomplete="off" onkeypress="return lettersOnly(event)"
+									value="OMiddleName"
 									onblur="initialvalidation('middlenameothr');" maxlength="25" />
 							</div>
 							<div class="col-md-3">
 								<input name="Last other name" type="text" id="lastnameothr"
 									class="form-control" onchange="upperMe('lastnameothr')"
 									style="background-color: #E9E9E9" disabled="disabled"
-									autocomplete="off" onkeypress="return lettersOnly(event)" value = "OLastName"
-									onblur="initialvalidation('lastnameothr');" maxlength="25" />
+									autocomplete="off" onkeypress="return lettersOnly(event)"
+									value="OLastName" onblur="initialvalidation('lastnameothr');"
+									maxlength="25" />
 							</div>
 						</div>
 					</div>
@@ -220,9 +287,9 @@
 											maxlength="7" value="91"
 											style="background-color: #E9E9E9; width: 25%;"
 											disabled="disabled" autocomplete="off"> <input
-											type="text" name="mobile" id="mobile"
-											class="form-control" maxlength="10" placeholder="Mobile No"
-											autocomplete="off" onkeypress="return isNumber(event)" value="9986339732">
+											type="text" name="mobile" id="mobile" class="form-control"
+											maxlength="10" placeholder="Mobile No" autocomplete="off"
+											onkeypress="return isNumber(event)" value="9986339732">
 									</div>
 								</td>
 							</tr>
@@ -242,10 +309,12 @@
 										<input name="" type="text" id="codenumb"
 											class="numeric form-control" maxlength="7" autocomplete="off"
 											placeholder="STD" style="width: 35%;"
-											onkeypress="return isNumber(event)"> <input name="landLine"
-											type="text" id="landLine" class="numeric form-control"
-											maxlength="10" autocomplete="off" placeholder="Land Line No"
-											style="width: 62.5%;" onkeypress="return isNumber(event)" value="011123456789">
+											onkeypress="return isNumber(event)"> <input
+											name="landLine" type="text" id="landLine"
+											class="numeric form-control" maxlength="10"
+											autocomplete="off" placeholder="Land Line No"
+											style="width: 62.5%;" onkeypress="return isNumber(event)"
+											value="011123456789">
 									</div>
 								</td>
 							</tr>
@@ -253,9 +322,10 @@
 								<td><label class="control-label">Communication <span
 										class="mandatory">*</span></label></td>
 								<td><div class="check-box">
-										<input type="radio" name="communication" value="0" id="communication"
-											onchange="officemandhide();"> <label for="resid1">Residence</label>
-										<input type="radio" name="communication" value="1" id="communication"
+										<input type="radio" name="communication" value="0"
+											id="communication" onchange="officemandhide();"> <label
+											for="resid1">Residence</label> <input type="radio"
+											name="communication" value="1" id="communication"
 											onchange="officemand();"> <label for="resid2">Office</label>
 									</div></td>
 							</tr>
@@ -493,25 +563,28 @@
 								<tr>
 									<td width="50%"><label class="form-label">Flat/Room/Door/Block
 											No.</label></td>
-									<td width="50%"><input name="input" type="text" value = "100"
-										class="form-control" id="flatroomnoresidence"
-										autocomplete="off" maxlength="25"></td>
+									<td width="50%"><input name="flatroomnoresidence"
+										type="text" value="100" class="form-control"
+										id="flatroomnoresidence" autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Name of
 											Premises/Building/Village</label></td>
-									<td><input name="input" type="text" class="form-control" value = "Place Building"
+									<td><input name="premiseresidence" type="text"
+										class="form-control" value="Place Building"
 										id="premiseresidence" autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Road/Street/Lane/Post
 											Office</label></td>
-									<td><input name="input" type="text" class="form-control" value = "Road"
-										id="roadstreetresidence" autocomplete="off" maxlength="25"></td>
+									<td><input name="roadstreetresidence" type="text"
+										class="form-control" value="Road" id="roadstreetresidence"
+										autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Area/Locality/Taluka/Sub-Division</label></td>
-									<td><input name="input" type="text" class="form-control" value = "Division"
+									<td><input name="arealocalityresidence" type="text"
+										class="form-control" value="Division"
 										id="arealocalityresidence" autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
@@ -573,13 +646,13 @@
 								<tr>
 									<td><label class="form-label">Pincode</label></td>
 									<td><input name="pincoderesidence" type="text"
-										id="pincoderesidence" maxlength="6" value = "123456"
+										id="pincoderesidence" maxlength="6" value="123456"
 										class="numeric form-control" autocomplete="off"
 										onkeypress="return isNumber(event)"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Country</label></td>
-									<td><input name="input" type="text" id="residence_country"
+									<td><input name="residence_country" type="text" id="residence_country"
 										value="INDIA" class="form-control"
 										style="background: rgb(241, 241, 241)" disabled="disabled"></td>
 								</tr>
@@ -600,32 +673,36 @@
 								<tr>
 									<td width="50%"><label class="form-label">Name of
 											Office</label></td>
-									<td width="50%"><input name="input" type="text" value = "Office Name"
-										class="form-control" id="nameofofc" autocomplete="off"
-										maxlength="25"></td>
+									<td width="50%"><input name="nameofofc" type="text"
+										value="Office Name" class="form-control" id="nameofofc"
+										autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Flat/Room/Door/Block
 											No.</label></td>
-									<td><input name="input" type="text" class="form-control" value = "1000"
-										id="floorrommno" autocomplete="off" maxlength="25"></td>
+									<td><input name="floorrommno" type="text"
+										class="form-control" value="1000" id="floorrommno"
+										autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Name of
 											Premises/Building/Village</label></td>
-									<td><input name="input" type="text" class="form-control" value = "Building"
-										id="nameofpremis" autocomplete="off" maxlength="25"></td>
+									<td><input name="nameofpremis" type="text"
+										class="form-control" value="Building" id="nameofpremis"
+										autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Road/Street/Lane/Post
 											Office</label></td>
-									<td><input name="input" type="text" class="form-control" value  = "Road"
-										id="roadstreet" autocomplete="off" maxlength="25"></td>
+									<td><input name="roadstreet" type="text"
+										class="form-control" value="Road" id="roadstreet"
+										autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">Area/Locality/Taluka/Sub-Division</label></td>
-									<td><input name="input" type="text" class="form-control" value = "Area"
-										id="arealocaldiv" autocomplete="off" maxlength="25"></td>
+									<td><input name="arealocaldiv" type="text"
+										class="form-control" value="Area" id="arealocaldiv"
+										autocomplete="off" maxlength="25"></td>
 								</tr>
 								<tr>
 									<td><label class="form-label">State/Union
@@ -684,7 +761,8 @@
 								</tr>
 								<tr>
 									<td><label class="form-label">Pincode</label></td>
-									<td><input name="input" type="text" id="pincodezipcode" value = "987654"
+									<td><input name="pincodezipcode" type="text"
+										id="pincodezipcode" value="987654"
 										class="numeric form-control" maxlength="6" autocomplete="off"
 										onkeypress="return isNumber(event)"></td>
 								</tr>
